@@ -25,6 +25,7 @@ describe Csv2schema::CSV do
   it 'sets the hash values we expect' do
     headers = @csv.instance_variable_get("@column_headers")
 
+    expect(headers['GP_PRACTICE_CODE']['name']).to eq 'GP_PRACTICE_CODE'
     expect(headers['GP_PRACTICE_CODE']['required']).to be true
     expect(headers['GP_PRACTICE_CODE']['format']).to eq :string
   end

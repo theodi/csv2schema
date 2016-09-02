@@ -14,7 +14,7 @@ module Csv2schema
 
       def get_column_headers
         headers = @validator.data.first
-        Hash[headers.each_with_index.map { |col, i| [col, {}] }]
+        Hash[headers.each_with_index.map { |col, i| [col, {'name' => col}] }]
       end
 
   end
