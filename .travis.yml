@@ -1,4 +1,12 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 before_install: gem install bundler -v 1.11.2
+deploy:
+  provider: rubygems
+  api_key:
+    secure: YZE/IjG3M/2QDaOHFHEMa34joShMud94A7CuvmNfQpqnpe1GntS9m84X58IAzFw6TbiJZdaZSdcMEjlskqepkw/aogwycx32t+bYSlgXY0DSz1sEu9lw3mQUwUzFyiNbpRUiELX3MsEpf72ZoFUnvKU24LHYb1r2+zkQcFqpZVVlzA0k24E10oYMz3MU6hjBvAJEuMfzVdjZo6oubl8Lx6Kz3YUxZUxLGajdrvoqKhrp/h9Eh0OHz53Psg+CK9Y0UoxQNFeUt/JBJUMwAHuHsIXDxFW4VVvYxrEiZ12H7dd7nbj0roR4I/YwcSyk5UIbWGcM0OTWCAVqruVD0TINj4gTrREO5zA6RP9aWa7PBJe1Ddp6jQBlFWCYm0mZMe/57hHA9jklVRFirggMAOsB6qzuGda7lElqqbKAUaJDY7mQAmSn3F8tuQDrRJmmrC2jogtrwgCpzPihLXGlSwmcACmcJ5C6mAuEtxcd1+ZE9bHotIPUVnnfHyshP0frIjkrcFcufl4+gCZhzcux81usGerSuM4QmfT8eyhkPSf7mZj2PKHt2ErUdfmm37HHt4WxGbes69ewvlZuNQIyonBV/dGoYWOwqYMAwxj5Furyk8R1jo2Fk5co3OwsoHEHo4axUDT4dCoUfq1A49KEGefvCRnTXtBnl2/B32u+debtMEU=
+  gem: csv2schema
+  on:
+    tags: true
+    repo: theodi/csv2schema
