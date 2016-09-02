@@ -7,6 +7,7 @@ module Csv2schema
       @validator = Csvlint::Validator.new(io)
       @column_headers = get_column_headers
       apply_formats
+      apply_required
     end
 
     private
