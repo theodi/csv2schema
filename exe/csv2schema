@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "csv2schema"
+require "thor"
+require "colorize"
+
+module Csv2schema
+  class Cli < Thor
+
+    desc "csv2schema /path/to/file.csv OR csv2schema http://example.org/file.csv", "Generate schema from CSV"
+    option :dump, type: :boolean
+    option :filename
+    def generate(source)
+      source = read_source(source)
+      csv = Csv2schema::CSV.new(source)
+      if options[:dump]
+        puts csv.schema
+      else
+        filename = options[:filename].nil? ? 'schema.json' : options[:filename]
+        File.open(filename, 'w') {|f| f.write(csv.schema) }
+        puts "Schema created at #{filename}!".colorize(:green)
+      end
+    end
+
+    private
+
+      def read_source(source)
+        if source.nil?
+          # If no source is present, try reading from stdin
+          if !$stdin.tty?
+            source = StringIO.new(STDIN.read) rescue nil
+            return_error "No CSV data to validate" if !options[:schema] && source.nil?
+          end
+        else
+          # If the source isn't a URL, it's a file
+          unless source =~ /^http(s)?/
+            begin
+              source = File.new( source )
+            rescue Errno::ENOENT
+              return_error "#{source} not found"
+            end
+          end
+        end
+        source
+      end
+
+  end
+end
+
+Csv2schema::Cli.start(ARGV)
