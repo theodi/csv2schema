@@ -2,6 +2,7 @@ module Csv2schema
   class CSV
     include Csv2schema::Formats
     include Csv2schema::Required
+    include Csv2schema::Schema
 
     def initialize(io)
       @validator = Csvlint::Validator.new(io)
