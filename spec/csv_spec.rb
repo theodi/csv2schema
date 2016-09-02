@@ -22,4 +22,11 @@ describe Csv2schema::CSV do
     expect(headers['ORG_NAME']).to be_a_kind_of(Hash)
   end
 
+  it 'sets the hash values we expect' do
+    headers = @csv.instance_variable_get("@column_headers")
+
+    expect(headers['GP_PRACTICE_CODE']['required']).to be true
+    expect(headers['GP_PRACTICE_CODE']['format']).to eq :string
+  end
+
 end
