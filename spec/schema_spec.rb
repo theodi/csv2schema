@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Csv2schema::Schema do
 
   before(:each) do
-    file = File.open(File.join('spec', 'fixtures', 'GP_Practice-info-England.csv'))
+    file = File.open(File.join('spec', 'fixtures', 'kitchen-sink.csv'))
     @csv = Csv2schema::CSV.new(file)
   end
 
@@ -13,75 +13,75 @@ describe Csv2schema::Schema do
     expect(schema).to eq({
       'fields' => [
         {
-          'name' => 'GP_PRACTICE_CODE',
-          'title' => 'GP_PRACTICE_CODE',
+          'name' => 'string',
+          'title' => 'string',
           'constraints' => {
             'required' => true,
             'type' => 'http://www.w3.org/2001/XMLSchema#string'
           }
         },
         {
-          'name' => 'POSTCODE',
-          'title' => 'POSTCODE',
-          'constraints' => {
-            'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#string'
-          }
-        },
-        {
-          'name' => 'CCG_CODE',
-          'title' => 'CCG_CODE',
-          'constraints' => {
-            'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#string'
-          }
-        },
-        {
-          'name' => 'NHSE_AREA_TEAM_CODE',
-          'title' => 'NHSE_AREA_TEAM_CODE',
-          'constraints' => {
-            'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#string'
-          }
-        },
-        {
-          'name' => 'NHSE_REGION_CODE',
-          'title' => 'NHSE_REGION_CODE',
-          'constraints' => {
-            'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#string'
-          }
-        },
-        {
-          'name' => 'TOTAL_ALL',
-          'title' => 'TOTAL_ALL',
+          'name' => 'integer',
+          'title' => 'integer',
           'constraints' => {
             'required' => true,
             'type' => 'http://www.w3.org/2001/XMLSchema#int'
           }
         },
         {
-          'name' => 'TOTAL_MALE',
-          'title' => 'TOTAL_MALE',
+          'name' => 'float',
+          'title' => 'float',
           'constraints' => {
             'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#int'
+            'type' => 'http://www.w3.org/2001/XMLSchema#float'
           }
         },
         {
-          'name' => 'TOTAL_FEMALES',
-          'title' => 'TOTAL_FEMALES',
+          'name' => 'URL',
+          'title' => 'URL',
           'constraints' => {
             'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#int'
+            'type' => 'http://www.w3.org/2001/XMLSchema#anyURI'
           }
         },
         {
-          'name' => 'ORG_NAME',
-          'title' => 'ORG_NAME',
+          'name' => 'boolean',
+          'title' => 'boolean',
           'constraints' => {
             'required' => true,
-            'type' => 'http://www.w3.org/2001/XMLSchema#string'
+            'type' => 'http://www.w3.org/2001/XMLSchema#boolean'
+          }
+        },
+        {
+          'name' => 'date',
+          'title' => 'date',
+          'constraints' => {
+            'required' => true,
+            'type' => 'http://www.w3.org/2001/XMLSchema#date'
+          }
+        },
+        {
+          'name' => 'datetime',
+          'title' => 'datetime',
+          'constraints' => {
+            'required' => true,
+            'type' => 'http://www.w3.org/2001/XMLSchema#dateTime'
+          }
+        },
+        {
+          'name' => 'yearmonth',
+          'title' => 'yearmonth',
+          'constraints' => {
+            'required' => true,
+            'type' => 'http://www.w3.org/2001/XMLSchema#gYearMonth'
+          }
+        },
+        {
+          'name' => 'time',
+          'title' => 'time',
+          'constraints' => {
+            'required' => true,
+            'type' => 'http://www.w3.org/2001/XMLSchema#time'
           }
         }
       ]
