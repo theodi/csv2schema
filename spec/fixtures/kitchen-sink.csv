@@ -1,0 +1,11 @@
+string,integer,float,URL,boolean,date,datetime,yearmonth,time
+abc,123,1.1,http://example.org/thing,yes,2015-01-01,2015-01-01T00:00:00Z,2001-01,00:00:00
+def,443,1.5,http://example.org/thing,no,2015-01-02,2015-01-01T00:00:00Z,2001-01,01:00:00
+sdsd,444,1.7,http://example.org/thing,yes,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+dssa,445,1.8,http://example.org/thing,yes,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdsad,55,2.0,http://example.org/thing,no,2015-01-23,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdsad,66,2.4,http://example.org/thing,no,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdsad,66,7.8,http://example.org/thing,no,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdas,77,1.2,http://example.org/thing,yes,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdasas,88,0.666,http://example.org/thing,no,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00
+asdsad,88,5.4,http://example.org/thing,yes,2015-01-01,2015-01-01T00:00:00Z,2002-01,00:00:00

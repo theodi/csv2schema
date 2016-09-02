@@ -3,6 +3,7 @@ require "json"
 
 require "csv2schema/version"
 
+require "csv2schema/format_builder"
 require "csv2schema/formats"
 require "csv2schema/required"
 require "csv2schema/schema"

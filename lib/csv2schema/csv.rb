@@ -5,7 +5,7 @@ module Csv2schema
     include Csv2schema::Schema
 
     def initialize(io)
-      @validator = Csvlint::Validator.new(io)
+      @validator = Csv2schema::Validator.new(io)
       @column_headers = get_column_headers
       apply_formats
       apply_required
