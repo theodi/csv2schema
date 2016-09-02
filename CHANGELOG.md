@@ -1,5 +1,8 @@
 # Change Log
 
+## [0.1.1](https://github.com/theodi/csv2schema/tree/0.1.1) (2016-09-02)
+[Full Changelog](https://github.com/theodi/csv2schema/compare/0.1.0...0.1.1)
+
 ## [0.1.0](https://github.com/theodi/csv2schema/tree/0.1.0) (2016-09-02)
 [Full Changelog](https://github.com/theodi/csv2schema/compare/0.0.1...0.1.0)
 
