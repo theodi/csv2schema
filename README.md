@@ -26,6 +26,32 @@ Or install it yourself as:
 
 ## Usage
 
+You can either use the gem on the command line, or in your own Ruby code
+
+### On the command line
+
+After installing the gem, you can generate a schema file on the command line like so:
+
+```
+csv2schema generate myfile.csv
+```
+
+This will generate a JSON table schema file at `schema.json`.
+
+You can also specify a filename and extension like so:
+
+```
+csv2schema generate myfile.csv --filename=myschema.json
+```
+
+If you want to dump the JSON to the command line (to pipe somewhere else for example) we can handle that too:
+
+```
+csv2schema generate myfile.csv --dump
+```
+
+### In your own Ruby code
+
 Require the gem (if you haven't already):
 
 ```ruby
