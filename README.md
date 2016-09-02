@@ -6,7 +6,7 @@
 
 # Csv2schema
 
-Automagically generate a JSON table schema file to go with a CSV file. Inspired by Stuart Lowe's [JSON Table Schema Generator](https://odileeds.github.io/JSONSchema/) at [ODI Leeds](https://leeds.theodi.org).
+Automagically generate a [JSON table schema](http://specs.frictionlessdata.io/json-table-schema/) file to go with a CSV file. Inspired by Stuart Lowe's [JSON Table Schema Generator](https://odileeds.github.io/JSONSchema/) at [ODI Leeds](https://leeds.theodi.org).
 
 ## Installation
 
