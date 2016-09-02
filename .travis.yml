@@ -1,3 +1,4 @@
+---
 language: ruby
 rvm:
 - 2.3.1
@@ -10,3 +11,8 @@ deploy:
   on:
     tags: true
     repo: theodi/csv2schema
+env:
+  global:
+    secure: jNfyOFHHWsNoOnpZeeB64rfpgBy1qn4h7pltuSwvW5LwuHBaQQU2d2vqi7ypqN7AfCvxU2ZGOmiGlhX7TjsIFhqs0LBpUuzde7xgMMrHuDr7fp3aNfKXjljdg0ltUsXjcgyoPMsaWJt9KqhIY3YFGcz+PeOFGmUVLDHUNjM2nyDIlmPxn5iCt/UzSOXWW3iHdjwfJyiUNLvRP+AxCfL0bR7d0LleitAk75ITcsKgbasekg51uFC/wvdZnPB88Er3Sr4y2/YXQDjQuyCj+cOZitNgHjFQ3lRz7CBHko5uA7NcQeFxLmV3oaOTmbwDGiI9fHjzWXDkWAc2jnf98B1UizFJDkGpftXBRrtoFqf6huIegJf+0bP4zKoEOfINHm50QGVLmbXDqN0Oc3WNJo/ULXm80W28yf7cuQBHSJ8ze+3Bllg8NHQwlCws2teHappkOG842Nzzx9qNs/ATleiHtvIo6iUtv5QXHkqD7OET6ubJVyGWw5guCRo/tpsFV1djEc3O9Dpc2aQs2hhz0gMvHVrb1V1mGGKwC37KEJCzRuPJypkTvSsylTLezq4eQ24E/jMpVMi97vceXbXpj+mxL1aaOwtDoN5QR6MCvC3w7dvODEG/mJ5wDtEhPp35zK3iwI26g/gxWrW9iy9cLz2jqBPY1EZJDOPvlD4OyB+XNSc=
+after_success:
+- bundle exec henry deploy
